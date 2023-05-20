@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom'
  const PopularSide = ({ content }) => {
   return (
     <div
-      className={`popular w-full col-span-2 lg:col-span-1 grid overflow-scroll  py-4  gap-2 order-last justify-center items-center    lg:items-start  `}
+      className={`popular col-span-2 lg:col-span-1 grid   py-4  gap-2 order-last justify-center items-center    lg:items-start  `}
     >
       {content.map((i, key) => {
         return (
           <Link
             to={`/popular_${i.id}`}
             key={key}
-            className={`flex hover:bg-soft_orange dark:hover:bg-soft_red  lg:hover:-translate-y-3 shadow-lg dark:shadow-off_white  md:justify-between h-[15rem] md:h-[14rem] col-span-1 w-auto items-center gap-2 md:gap-4  `}
+            className={`flex px-2 hover:bg-soft_orange dark:hover:bg-soft_red  lg:hover:-translate-y-3 shadow-lg dark:shadow-off_white  md:justify-between h-[15rem] md:h-[14rem] col-span-1 w-auto items-center gap-2 md:gap-4  `}
           >
             
             {/* image */}

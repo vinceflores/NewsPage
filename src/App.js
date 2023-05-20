@@ -7,12 +7,13 @@ import NewArticles from './Components/NewsArticle';
 import {data} from './data.js'
 import PopularArticle  from './Components/PopularArticle';
 import Trending from './Components/Trending';
+import ScrollToTop from './Hooks/ScrollToTop';
 function App() {
   const article = data.articles 
   return (
     <div className="App font-inter flex justify-center flex-col items-center text-very_dark_blue dark:bg-very_dark_blue ">
         <Router> 
-
+        <ScrollToTop/> 
         <Navbar/> 
         <Routes>
           <Route path='/' element={ <Home/>} /> 
