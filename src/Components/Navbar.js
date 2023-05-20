@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex gap-[16rem] justify-center  md:justify-between z-[1] w-screen sticky top-0 items-center bg-white px-4 ">
+      <div className="flex gap-[16rem] justify-center  md:justify-between z-[1] w-screen sticky top-0 items-center dark:bg-dark_grayish_blue bg-white px-4 ">
         <img src={logo} alt="logo" className="aspect-square  object-contain" />
         <ul className="hidden md:flex gap-4  ">
           <li className="cursor-pointer hover:text-soft_red ">
@@ -79,19 +79,21 @@ const Navbar = () => {
       <div
         className={`${
           clicked ? "flex translate-x-[4.9rem]" : "hidden translate-x-[-25rem]"
-        } z-[4] flex-col justify-start items-start  gap-8 fixed top-0 py-4  bg-off_white h-[100vh] w-[60vw]`}
+        } z-[4] flex-col justify-start items-start  gap-8 fixed top-0 py-4  bg-off_white dark:bg-dark_grayish_blue h-[100vh] w-[60vw]`}
       >
         <div className="w-full flex justify-end items-center">
           <img src={close} alt="close" onClick={handleclick} className="mx-4" />
         </div>
-        <ul className={`  bg-off_white  flex-col flex  gap-8   w-full `}>
-          {n.map((i, index) => {
+        <ul className={`   flex-col flex  gap-8   w-full `}>
+          {nav_links.map((i, index) => {
             return (
               <li
                 key={index}
                 className=" text-[16px] cursor-pointer hover:text-soft_red text-left  px-4 "
               >
-                {i}
+                <Link to={i.path}>
+                {i.title}
+                </Link>
               </li>
             );
           })}

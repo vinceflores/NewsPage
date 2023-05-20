@@ -2,21 +2,26 @@ import gaming_growth from "./images/image-gaming-growth.jpg";
 import retro_pcs from "./images/image-retro-pcs.jpg";
 import top_laptops from "./images/image-top-laptops.jpg";
 import hydrogen_vs_electric from "./images/Hydrogen-vs-Ele-0.png"
+import {downside_of_AI} from './Data/new/the-downsides-of-AI.js'
+import {is_vc_funding_drying_up} from './Data/new/is-VC-funding-drying-up.js'
+import {reviving_retro_pc} from './Data/popular/reviving-retro-pc.js'
+import {top_10_laptops_twenty_two} from './Data/popular/top-10-laptops-22.js'
+import {retro_pc} from './Data/popular/retro_pcs.js'
 export const data = {
   new: [
     {
-      id: "one",
+      id: "0",
       title: "Hydrogen VS Electric Cars",
       description: "Will hydrogen-fueled cars ever catch up to EVs?",
     },
     {
-      id: "two",
+      id: "1",
       title: " The Downsides of AI Artistry",
       description:
         " What are the possible adverse effects of on-demand AI image generation?",
     },
     {
-      id: "three",
+      id: "2",
       title: "Is VC Funding Drying Up?",
       description:
         "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
@@ -24,26 +29,27 @@ export const data = {
   ],
   popular: [
     {
-      id: "01",
+      id: "0",
       image: gaming_growth,
       title: " Reviving Retro PCs",
       description: " What happens when old PCs are given modern upgrades?",
     },
     {
-      id: "02",
+      id: "1",
       image: top_laptops,
       title: " Top 10 Laptops of 2022",
       description: " Our best picks for various needs and budgets.",
     },
     {
-      id: "03",
+      id: "2",
       image: retro_pcs,
       title: " The Growth of Gaming",
       description: "How the pandemic has sparked fresh opportunities.",
     },
   ],
   articles: {
-    new:[{
+    new:[
+      {
         "title": "Hydrogen vs. Electric Cars: Closing the Gap?",
         "image": hydrogen_vs_electric, 
         "content": [
@@ -95,6 +101,12 @@ export const data = {
             While hydrogen-fueled cars hold promise as an alternative to electric vehicles, significant challenges must be addressed to close the gap. The limited hydrogen infrastructure, higher costs, and lower efficiency compared to EVs pose significant obstacles to widespread adoption. Nonetheless, advancements in hydrogen production methods, increased industry collaboration, and government support could enhance the viability of hydrogen cars in the future. Ultimately, both technologies have their merits, and a combination of EVs and hydrogen cars may pave the way for a cleaner and more sustainable transportation ecosystem.`] 
           }
         ], 
-    }]
+    },
+    downside_of_AI,
+    is_vc_funding_drying_up, 
+  ], 
+    popular: [
+      reviving_retro_pc, top_10_laptops_twenty_two, retro_pc
+    ]
   },
 };
