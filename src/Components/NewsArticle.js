@@ -29,7 +29,7 @@ const NewArticles = ({index}) => {
       </div>
 
       <div
-        className={`bg-very_dark_blue dark:bg-soft_red col-span-2 row-span-2 flex flex-col justify-start items-start md:order-2  gap-4 text-left px-4 text-off_white  `}
+        className={`bg-very_dark_blue dark:bg-soft_red col-span-2 lg:col-span-1 row-span-2 flex flex-col justify-start items-start md:order-2  gap-4 text-left px-4 text-off_white  `}
       >
         <h1 className="text-3xl text-soft_orange font-bold mt-4">New</h1>
         <New content={data.new} />
