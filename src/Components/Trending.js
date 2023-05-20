@@ -4,7 +4,7 @@ import {bright} from '../Data/the-brightside-web3'
  const Trending = ({index}) => {
   const article = bright;
   return (
-    <div className=" h-auto p-8 gap-8 grid grid-cols-2 lg:m-[12rem] text-very_dark_blue dark:text-off_white dark:bg-very_dark_blue">
+    <div className="trending h-auto p-8 gap-8 grid grid-cols-2 lg:m-[12rem] text-very_dark_blue dark:text-off_white dark:bg-very_dark_blue">
 
       <h1 className="w-full text-2xl mt-4 md:text-6xl font-extrabold  col-span-2">
         {article.title}
@@ -13,7 +13,7 @@ import {bright} from '../Data/the-brightside-web3'
         <img
           src={article.image}
           alt="img"
-          className=" aspect-square object-contain p-8  w-[50%] "
+          className=" aspect-square object-cover md:p-8  w-[50%] "
         />
       </div>
 
@@ -32,3 +32,6 @@ import {bright} from '../Data/the-brightside-web3'
 };
 
 export default Trending;
+
+// TODO add new to the right of the article
+// TODO add popular to the right of the article

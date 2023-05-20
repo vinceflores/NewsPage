@@ -3,27 +3,33 @@ import logo from "../images/logo.svg";
 import open from "../images/icon-menu.svg";
 import close from "../images/icon-menu-close.svg";
 import { Link } from "react-router-dom";
+import {Link as Scroll} from "react-scroll"
 
 const n = ["Home", "New", "Popular", "Trending", "Categories"];
 const nav_links = [
   {
     title: "Home",
+    c: "home", 
     path: "/",
   },
   {
     title: "New",
+    c: "new", 
     path: "/",
   },
   {
     title: "Popular",
+    c: "popular", 
     path: "/",
   },
   {
     title: "Trending",
+    c:"trending" , 
     path: "/",
   },
   {
     title: "Categories",
+    c: '', 
     path: "/",
   },
 ];
@@ -62,7 +68,7 @@ const Navbar = () => {
           {nav_links.filter((i, index) => index > 0).map((i, index) => {
             return (
               <li key={index} className="cursor-pointer hover:text-soft_red ">
-                <Link to={i.path}>{i.title}</Link>
+                <Scroll to={i.c} smooth={true} spy={true} offset={-200} duration={800}  >{i.title}</Scroll>
               </li>
             );
           })}
@@ -89,11 +95,13 @@ const Navbar = () => {
             return (
               <li
                 key={index}
+                onClick={handleclick}
                 className=" text-[16px] cursor-pointer hover:text-soft_red text-left  px-4 "
               >
                 <Link to={i.path}>
                 {i.title}
                 </Link>
+
               </li>
             );
           })}
@@ -104,3 +112,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// TODO implement Link and Scroll for mobile nav / side nav
+

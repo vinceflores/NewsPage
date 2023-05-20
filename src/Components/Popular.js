@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 export const Popular = ({ content }) => {
   return (
     <div
-      className={` w-full grid md:grid-cols-4 lg:grid-cols-3 py-4 md:col-span-3  gap-4 order-last justify-center items-center    lg:items-start  `}
+      className={`popular w-full grid md:grid-cols-4 lg:grid-cols-3 py-4 md:col-span-3  gap-4 order-last justify-center items-center    lg:items-start  `}
     >
       {content.map((i, key) => {
         return (
@@ -43,3 +43,5 @@ export const Popular = ({ content }) => {
     </div>
   );
 };
+
+// TODO add a selected state that allows the selected cards to be highlighted

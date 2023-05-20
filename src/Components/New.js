@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const New = ({ content }) => {
   return (
-    <div className="text-left w-full flex flex-col gap-4 py-2">
+    <div className="new text-left w-full flex flex-col gap-4 py-2">
       {content
         .filter((i, j) => j !== content.length - 1)
         .map((i, key) => {

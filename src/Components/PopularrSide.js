@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
  const PopularSide = ({ content }) => {
   return (
     <div
-      className={` w-full col-span-2 lg:col-span-1 grid overflow-scroll  py-4  gap-2 order-last justify-center items-center    lg:items-start  `}
+      className={`popular w-full col-span-2 lg:col-span-1 grid overflow-scroll  py-4  gap-2 order-last justify-center items-center    lg:items-start  `}
     >
       {content.map((i, key) => {
         return (
@@ -46,3 +46,6 @@ import {Link} from 'react-router-dom'
 };
 
 export default PopularSide
+
+
+// TODO add a selected state that allows the selected cards to be highlighted

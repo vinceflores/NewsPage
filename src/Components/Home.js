@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div
-      className={`grid pt-4 md:grid-cols-3 md:grid-rows-3 gap-4 lg:gap-8 place-content-center md:scale-100 lg:scale-[90%] mx-3 md:mx-6`}
+      className={`home grid pt-4 md:grid-cols-3 md:grid-rows-3 gap-4 lg:gap-8 place-content-center md:scale-100 lg:scale-[90%] mx-3 md:mx-6`}
     >
       <img
         src={web3_desktop}
