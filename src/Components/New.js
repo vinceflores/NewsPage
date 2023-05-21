@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 export const New = ({ content }) => {
-
-  
-
   return (
     <div className="new text-left w-full flex flex-col gap-4 py-2">
       {content
@@ -13,9 +9,11 @@ export const New = ({ content }) => {
         .map((i, key) => {
           return (
             <div className="flex flex-col w-full justify-between items-start my-2 gap-4">
-              <h2 className="text-lg font-bold w-full  text-off_white">
-                <Link to={`/new${i.id}`}>{i.title}</Link>
-              </h2>
+              <Link to={`/new${i.id}`}>
+                <h2 className="text-lg font-bold w-full  text-off_white">
+                  {i.title}
+                </h2>
+              </Link>
               <p className="text-15px">{i.description}</p>
               <button className="bg-soft_red dark:bg-very_dark_blue px-4 py-2 dark:shadow-off_white shadow-md">
                 <Link to={`/new${i.id}`}>Read More</Link>
@@ -26,12 +24,16 @@ export const New = ({ content }) => {
         })}
       <div className="flex flex-col w-full justify-between items-start my-2  gap-4">
         <h2 className="text-lg font-bold w-full  text-off_white">
-          <Link to={`/new${content[content.length - 1].id}`}>{content[2].title}</Link>
+          <Link to={`/new${content[content.length - 1].id}`}>
+            {content[2].title}
+          </Link>
         </h2>
         <p className="text-15px">{content[content.length - 1].description}</p>
-        <button className="bg-soft_red dark:bg-very_dark_blue px-4 py-2 dark:shadow-off_white shadow-md">
-          <Link to={`/new${content[content.length - 1].id}`}>Read More</Link>
-        </button>
+        <Link to={`/new${content[content.length - 1].id}`}>
+          <button className="bg-soft_red dark:bg-very_dark_blue px-4 py-2 dark:shadow-off_white shadow-md">
+            Read More
+          </button>
+        </Link>
       </div>
     </div>
   );
